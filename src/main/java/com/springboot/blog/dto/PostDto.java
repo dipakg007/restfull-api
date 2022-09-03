@@ -1,10 +1,13 @@
 package com.springboot.blog.dto;
 
+import java.util.Set;
+
 public class PostDto {
 	private Long id;
 	private String title;
 	private String description;
 	private String content;
+	private Set<CommentDto> comments;
 
 	public PostDto() {
 		super();
@@ -51,9 +54,17 @@ public class PostDto {
 		this.content = content;
 	}
 
-	@Override
-	public String toString() {
-		return "PostDto [id=" + id + ", title=" + title + ", description=" + description + ", content=" + content + "]";
+	public Set<CommentDto> getComments() {
+		return comments;
 	}
+
+	public void setComments(Set<CommentDto> comments) {
+		this.comments = comments;
+	}
+
+//	@Override
+//	public String toString() {
+//		return "PostDto [id=" + id + ", title=" + title + ", description=" + description + ", content=" + content + "]";
+//	}
 
 }

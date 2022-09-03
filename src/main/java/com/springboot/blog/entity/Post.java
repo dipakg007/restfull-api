@@ -76,9 +76,17 @@ public class Post {
 		this.content = content;
 	}
 
-	@Override
-	public String toString() {
-		return "Post [id=" + id + ", title=" + title + ", description=" + description + ", content=" + content + "]";
+	public Set<Comment> getComments() {
+		return comments;
 	}
+
+	public void setComments(Set<Comment> comments) {
+		this.comments = comments;
+	}
+
+//	@Override
+//	public String toString() {
+//		return "Post [id=" + id + ", title=" + title + ", description=" + description + ", content=" + content + "]";
+//	}
 
 }
