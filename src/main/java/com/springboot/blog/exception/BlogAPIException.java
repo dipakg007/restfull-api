@@ -3,6 +3,10 @@ package com.springboot.blog.exception;
 import org.springframework.http.HttpStatus;
 
 public class BlogAPIException extends RuntimeException {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8684855107988678019L;
 	private HttpStatus status;
 	private String message;
 

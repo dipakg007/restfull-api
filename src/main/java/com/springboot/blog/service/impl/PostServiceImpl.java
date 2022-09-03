@@ -23,7 +23,7 @@ public class PostServiceImpl implements PostService {
 
 	@Autowired
 	private PostRepository postRepository;
-	
+
 	@Autowired
 	private ModelMapper modelMapper;
 
@@ -82,7 +82,7 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public void deletePost(Long id) {
-		Optional<Post> _post = Optional.ofNullable(
+		Optional.ofNullable(
 				postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id)));
 		postRepository.deleteById(id);
 	}
@@ -90,7 +90,7 @@ public class PostServiceImpl implements PostService {
 	// Convert Entity To DTO
 	private PostDto mapToDto(Post post) {
 		PostDto postDto = modelMapper.map(post, PostDto.class);
-		
+
 //		PostDto postDto = new PostDto();
 //		postDto.setId(post.getId());
 //		postDto.setTitle(post.getTitle());
